@@ -511,21 +511,4 @@ UPDATE products SET stock = stock - 3 WHERE id = 1;
 - [React Hooks](https://react.dev/reference/react/hooks)
 - [Flutter State Management](https://flutter.dev/docs/development/data-and-backend/state-mgmt)
 
----
 
-## 📄 License
-
-MIT License - See LICENSE file for details
-
----
-
-## Author Notes
-
-This system was designed to demonstrate:
-- ✅ Understanding of distributed transaction problems
-- ✅ Proper backend architecture
-- ✅ Race condition prevention techniques
-- ✅ Single responsibility principle
-- ✅ API design best practices
-
-Every architectural decision serves a specific purpose in preventing data inconsistency and maintaining system reliability under concurrent load.
