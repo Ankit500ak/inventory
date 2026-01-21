@@ -8,7 +8,7 @@ This system implements an inventory allocation system with:
 - **Single API endpoint** for order placement (`POST /order`)
 - **Proper architecture** with clear separation (routes → controllers → services → repositories)
 - **Concurrency handling** using PostgreSQL transactions and row-level locks
-- **Frontend implementations** in React and Flutter
+- **Frontend implementation** in React
 
 ### Key Design Principles
 
@@ -40,14 +40,15 @@ InventoryAllocationSystem/
 │   │   ├── controllers/
 │   │   │   └── orderController.js    # HTTP request handling (NO LOGIC)
 │   │   ├── routes/
-│   │   │   └── orders.js            # Route definitions (ONLY POST /order)
+│   │   │   └── orders.js            # Route definitions
 │   │   └── middleware/
 │   │       └── errorHandler.js      # Error handling middleware
 │   ├── scripts/
-│   │   └── migrate.js               # Database setup script
+│   │   ├── migrate.js               # Database setup script
+│   │   └── setup.js                 # Initial setup script
 │   ├── index.js                     # Express app entry point
 │   ├── package.json                 # Dependencies
-│   └── .env.example                 # Environment configuration template
+│   └── .env                         # Environment configuration
 │
 ├── frontend-react/                   # React Frontend
 │   ├── src/
@@ -59,13 +60,9 @@ InventoryAllocationSystem/
 │   ├── package.json                 # React dependencies
 │   └── README.md                    # React setup instructions
 │
-├── frontend-flutter/                 # Flutter Frontend
-│   ├── lib/
-│   │   └── main.dart                # Flutter app with models and UI
-│   ├── pubspec.yaml                 # Flutter dependencies
-│   └── README.md                    # Flutter setup instructions
-│
-└── README.md                         # This file
+├── .gitignore                        # Git ignore rules
+├── README.md                         # This file
+└── STARTUP.md                        # Startup and deployment guide
 ```
 
 ---
